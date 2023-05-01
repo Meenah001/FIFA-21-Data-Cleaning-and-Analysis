@@ -352,25 +352,17 @@ After all the cleaning has been done, the data was loaded to Microsoft Excel usi
 
 Below is the cleaned dataset on Microsoft Excel after all the cleaning and transformations.
 
+![cleaned](https://user-images.githubusercontent.com/97677904/235503430-ff5c1c1e-c3ba-4eab-b377-6d028f2a2ca6.jpg)
 
-Cleaned FIFA21 Data
 CONCLUSION AND RECOMMENDATION
 
-This challenge really helped me to know more about data cleaning and its importance to Data Analysis. I learnt some concept and procedure while cleaning the data.
+I learnt some concept and procedure while cleaning the data. This really add to my data cleaning knowledge
 
 It is important to know more about a data before starting the cleaning operation process. By doing so, one will get familiar and also be guided on what is expected to be done on the dataset. For instance, with the help of the data dictionary the cleaning was made easier.
 
 Here is the link to the cleaned data:
 
-FIFA 21 cleaned data.xlsx
-
-Thanks for reading!
-
-Your thought and remarks will be highly appreciated
-
-You can reach me on Twitter https://twitter.com/yemocute001?t=2rUbsRRK1c61TbiEsEH03A&s=09
-
-LinkedIn https://www.linkedin.com/in/owolabi-aminat-188a43191
+https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicrosoft_com/Edr-bY8edgJPlUBL4nsa0P0BlIC2OsFGHcZZDrfiM-N_VQ?rtime=XhyWyW9K20g
 
 
 
