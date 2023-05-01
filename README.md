@@ -2,6 +2,8 @@
 
 The project is all about data cleaning, which is the crucial step in analysis.
 
+![Screenshot 2023-05-01 142703](https://user-images.githubusercontent.com/97677904/235506580-a987b861-9c8f-4ce4-b80c-025e80d1fa6a.jpg)
+
 ---
 
 # INTRODUCTION
