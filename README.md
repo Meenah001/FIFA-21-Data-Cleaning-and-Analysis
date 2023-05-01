@@ -202,6 +202,242 @@ Note: Before going further with your cleaning, make sure you have a backup of yo
 
 After loading the data to the power query editor in Microsoft Excel, I noticed that almost all the records in the column has some extra spaces in between them. While going through to see where the problem came from, I got to know it was from a column named “Club” which has all it records written at the bottom instead of it being at the upper part of the line.
 
+# Below is the image of how the data looks like before the removal of the excess spaces
+
+![1 excess space](https://user-images.githubusercontent.com/97677904/235484353-f36833b5-9c08-4d56-9a27-bc4e10bf7d1b.jpg)
+
+In order to remove the excess spaces, I selected the club column which is obviously the one causing the excess spaces. I then right-click on it, this popped up different options. I clicked on TRANSFORM in the available options and then select TRIM, this helped to remove the excess spaces. The image below shows the data after the excess spaces have been removed.
+
+![2 excess space trimmed](https://user-images.githubusercontent.com/97677904/235485237-f9b0f562-ef3e-434e-bbb2-4bdb6fc3b7dc.jpg)
+
+---
+
+After removing the excess spaces from the data, I started the cleaning process from the first column which was the “ID” to the “Hits” column which was the last column in the dataset. Follow as I show you the step by step guides to clean all the dirty records in the data.
+
+ID: This is the unique identifier of each record in the Table. I noticed that the data type used was wrong (Whole number data type) and I changed it to the appropriate data type (Text data type)
+
+![Id](https://user-images.githubusercontent.com/97677904/235485884-7fb1e3a6-af7a-48ee-b826-66b1c939c8ed.jpg)                  ![id change](https://user-images.githubusercontent.com/97677904/235486006-edca3e27-d598-4e30-857b-125ade38b9dc.jpg)
+
+---
+
+Name: In this column a special character was found. In order to remove this, I replaced the special character with correct letter.
+
+![spc](https://user-images.githubusercontent.com/97677904/235486848-0eeca1a6-e2e1-44f3-8544-d87bb9441350.jpg)
+
+
+Note: Always filter your data to check if the records in each column contains any forms of error such as spelling mistakes, special characters, null values, outliers among others
+
+---
+
+Photo URL and Player URL: These two columns were removed. This is because they are both meta-data (meta-data describes and gives information about another data).
+
+![meta](https://user-images.githubusercontent.com/97677904/235487149-4203672d-7e41-4f01-be88-9fddcb91655c.jpg)
+
+---
+
+Nationality, Age and Club: No cleaning was needed in these three columns, because they had no issues of missing values, null values or data type problems.
+
+![3](https://user-images.githubusercontent.com/97677904/235489519-85cf49a9-9589-47a7-a06d-c2a47078e78a.jpg)
+
+---
+
+OVA and POT: According to the data dictionary, it was made known that OVA means the player Overall Rating and POT means Overall Potential. These two columns were to be measured in percentage. To do that I divided both column by 100, I then changed both data type to % and also the column name from OVA/POT to their full meaning has given in the data dictionary.
+
+# BEFORE
+![5 OVA column was to change to percentage](https://user-images.githubusercontent.com/97677904/235492044-0bb95aef-879f-46db-a913-fb38c704173d.jpg)
+
+# AFTER
+![8 POT changed to potntial rating   %](https://user-images.githubusercontent.com/97677904/235492373-882ca19b-4123-40a7-b149-94b2fea680a8.jpg)
+
+---
+
+Contract: This column has a lot of work to be done on it, and this is because it contains some inconsistent values in the record. It represents the players “Start” and “End” of contract in years, but it was seen that some the players contracts were PAID, some were LOAN while others were FREE.
+
+![cont](https://user-images.githubusercontent.com/97677904/235492757-e2301795-7429-494b-9a02-6d2daa9ebf2b.jpg)
+
+A conditional column was created in order to group the different types of contracts (i.e Contracts, Loan and Free) in a separate column.
+
+![10 conditional formatting 4 contract column](https://user-images.githubusercontent.com/97677904/235493064-96a8b0e0-c149-431f-a571-23c1bf32223c.jpg)
+
+After applying the conditional column, the below column was created ( Agreement column).
+
+![11 Result of conditional column](https://user-images.githubusercontent.com/97677904/235493191-0bdd0d12-1d89-4aa6-b5a1-1350f0565588.jpg)
+
+After getting the new column i.e the “Agreement column” , I split the contract column by delimiter which was the (~) sign between each contract year so as to get the contract starting year and End year. This gave two new columns namely contract.1 and contract.2
+
+![12 contract column splitted to get the start and end year of contract](https://user-images.githubusercontent.com/97677904/235493381-6fa3e3e8-9d6a-4d2d-8bba-e6550d04a78d.jpg)
+
+Further analysis was made to get the duration of each contract, this was done by using the Custom Column under the Add Column ribbon. Then the below formula was input in it i.e subtracting the Contract.2 from Contract.1 Some empty values were returned after the operation was carried out, and they were all replaced with null.
+
+![13i contract duration got using custom column 2 subtract strart 4rm end](https://user-images.githubusercontent.com/97677904/235493714-13ca8e71-eb87-4696-a96b-d09cc832501d.jpg)
+
+---
+
+Height: This column shows the height of each player. There were some inconsistency in the value recorded under this column. some heights were measured in cm while some in feet and inches.
+
+![13 Hight colum in cm,lbs $ inches](https://user-images.githubusercontent.com/97677904/235494460-fc4c6f0e-9ba1-4c9e-841b-5529f1436588.jpg)
+
+
+Three tasks are needed to be carried out here. Firstly, convert foot to inches, secondly to convert inches to cm and lastly to convert foot to cm . The below formula was used.
+
+12 inches = 1ft
+
+0.393701 inch = 1cm
+
+Formula for inches
+
+foot * 12 + inches
+
+Using conditional column, I converted the foot to inches by multiplying the foot by 12 , also converted the inches to cm using 0.393701 by applying conditional statement. I then split the column by delimiter to separate the feet from inches. After which I then added the inches which was separated with the feet in order to convert to inches. The final task was to divide the result gotten from conversion to inches by 0.393701 which result in converting all the records to cm.
+
+![14 conditional column 2 convert 2 cm](https://user-images.githubusercontent.com/97677904/235494591-76965a0e-b8dd-456f-be19-f69383c46102.jpg)
+
+![15 the height column was split by ' delimeter ](https://user-images.githubusercontent.com/97677904/235494638-3f077d98-3aa8-407e-8710-7f73b3f4d0fa.jpg)
+
+![16 cleaned height column](https://user-images.githubusercontent.com/97677904/235494713-f23db83d-3a68-4b17-a42c-fb4f78a0d1de.jpg)
+
+---
+
+Weight: Similar problem has “Height” was faced here, some of the records were measured in kg and lbs. I applied the same process used in the Height column too, but a different conditional statement was used for the conversion since we’re converting from “kg” to “lbs.” as stated in the data dictionary. So, I converted the records from “kg” to “lbs.” using this formula 2.205kg = 1lbs.
+
+![17 weight col contains diff unit](https://user-images.githubusercontent.com/97677904/235495089-75441aa3-a03b-49a5-ad56-1fe3563ce1dd.jpg)
+
+![18i weight conversion using conditional col (lbs)](https://user-images.githubusercontent.com/97677904/235495137-b3b1b6ac-527a-4cd6-8dcd-22c9dc05e62a.jpg)
+
+![19 weight cleaned](https://user-images.githubusercontent.com/97677904/235495176-05359c36-49cb-4c26-bf0b-b1fb1a8566a7.jpg)
+
+---
+
+Joined: I filtered this column to check for any inconsistencies in the record, there were no inconsistent records found. The data type used was appropriate.
+
+![joined](https://user-images.githubusercontent.com/97677904/235495469-e09a4356-72e8-4962-bad7-47a427b2577c.jpg)
+
+---
+
+The Value, Wage, and Release-Clause: This represents the market value, weekly wage and release clause of players in FIFA 2021. I noticed some of the records have K while others have M so we need to convert them to currency, so I multiplied the M values with 1,000,000 and the K values with 1,000 by using conditional statement. So, I removed the “M”,”K”, and “€” in order to multiply the column with the Conditional Column Created.
+
+![20 Value col with inconsitent unit (M   K)](https://user-images.githubusercontent.com/97677904/235495770-7e415659-1be5-48bf-9066-76c22f734200.jpg)
+
+![25 wage col cleaned](https://user-images.githubusercontent.com/97677904/235496042-024df4dc-152c-4cc9-9176-cadc77e5fa4f.jpg)
+
+![27 release col cleaned](https://user-images.githubusercontent.com/97677904/235496129-27582b1d-70ff-4260-b599-cb1ab637efde.jpg)
+
+---
+
+W/F, S/M and IR: They’re measured in the scale of 1–5. I removed the star rating by using the replace value and changed the datatype to whole number.
+
+![28 d selected cols has star @ d back of their values](https://user-images.githubusercontent.com/97677904/235496315-d5612f4e-778a-45f8-8533-e39392b48325.jpg)
+
+![29 replac val funtx used to rmove d star](https://user-images.githubusercontent.com/97677904/235496355-0b26e2a9-d195-4fa5-a991-2a91e7a6608f.jpg)
+
+---
+
+Attacking’, ‘Crossing’, ‘Finishing’, ‘Heading_accuracy’, ‘Short_passing’, ‘Volleys’, ‘Skill’, ‘Dribbling’, ‘Curve’, ‘FK_accuracy’, ‘Long_passing’, ‘Ball_control’, ‘Movement’, ‘Acceleration’, ‘Spring_speed’, ‘Agility’, ‘Reactions’, ‘Balance’, ‘Power’, ‘Shot_power’, ‘Jumping’, ‘Stamina’, ‘Strength’, ‘Long_shot’, ‘Mentality’, ‘Aggression’, ‘Interception’, ‘Positioning’, ‘Vision’, ‘Penalties’, ‘Composure’, ‘Defending’, ‘Marking’, ‘Standing_tackle’, ‘Sliding_tackle’, ‘Goalkeeping’, ‘GK_handling’, ‘GK_diving’, ‘Gk_kicking’, ‘Gk_positioning’, ‘Gk_reflexes’, ‘Total_stats’, ‘Base_stats’, ‘Pace’, ‘Shooting’, ‘Passing’, ‘DRI’, ‘DEF’, ‘Physical’, ‘Best_position’, ‘Preferred_foot’, ‘Attacking_workrate’, and ‘Defensive_workrate’: These columns were checked and no issues found within the data. The data types were also checked, and changes were made for some that had wrong data types and column names corrected.
+
+![agiki](https://user-images.githubusercontent.com/97677904/235496947-156f1f09-9723-4638-93d2-c34ad4c17a40.jpg)
+
+---
+
+Hit: This refers to the number of times a player’s profile has been viewed on the website. The column has some blanks which means the players has no hit which was replaced with zero. Some players has over a thousands view which is represented by “K” which was removed and multiply by 1000 using Conditional Column.
+
+![30 Hits col has valus dat has K ](https://user-images.githubusercontent.com/97677904/235497013-95617d14-f29d-4329-906a-a225626ce076.jpg)
+
+![31 condtn col was used 2 remove K in Hits col](https://user-images.githubusercontent.com/97677904/235497106-c6dbde55-bd01-4978-b5da-f55e3f4ddeda.jpg)
+
+![32 Hit col cleaned](https://user-images.githubusercontent.com/97677904/235497148-090493c4-99e5-44ff-9162-4906946576ff.jpg)
+
+---
+
+After all the cleaning has been done, the data was loaded to Microsoft Excel using the “Close & Load” option on the top left section of the Power Query Editor.
+
+Below is the cleaned dataset on Microsoft Excel after all the cleaning and transformations.
+
+
+Cleaned FIFA21 Data
+CONCLUSION AND RECOMMENDATION
+
+This challenge really helped me to know more about data cleaning and its importance to Data Analysis. I learnt some concept and procedure while cleaning the data.
+
+It is important to know more about a data before starting the cleaning operation process. By doing so, one will get familiar and also be guided on what is expected to be done on the dataset. For instance, with the help of the data dictionary the cleaning was made easier.
+
+Here is the link to the cleaned data:
+
+FIFA 21 cleaned data.xlsx
+
+Thanks for reading!
+
+Your thought and remarks will be highly appreciated
+
+You can reach me on Twitter https://twitter.com/yemocute001?t=2rUbsRRK1c61TbiEsEH03A&s=09
+
+LinkedIn https://www.linkedin.com/in/owolabi-aminat-188a43191
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
