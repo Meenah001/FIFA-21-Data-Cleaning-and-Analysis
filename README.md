@@ -356,6 +356,54 @@ Below is the cleaned dataset on Microsoft Excel after all the cleaning and trans
 
 ![cleaned](https://user-images.githubusercontent.com/97677904/235503430-ff5c1c1e-c3ba-4eab-b377-6d028f2a2ca6.jpg)
 
+---
+
+# PROBLEM STATMENT
+
+Some questions were been asked in order to derive a meaningful insight on the data. Some of these questions are;
+
+. Who are the top 15 players in FIFA 21?
+. Who are the top 5 goalkeepers?
+. Who ar the top 10 defenders?
+. Who is the best central defensive midfielder?
+. Who is the overall best player?
+. Who are the top 2 strikers?
+. Who are the 10 most valueable players in FIFA 21? 
+. What is the  most populated age group?
+. Who are the top 9 footballers with the highest wage?
+. Which is the most preferred foot by footballers? 
+. Top countries that has the highest number of footballer
+. Top 5 players with the longest contract duration
+. Top 10 players that has the most skill attributes
+
+---
+
+# DATA ANALYSIS AND VISUALIZATION
+
+Analysis was carried out using pivot table, and also pivort chart for building dashboard in Excel.
+
+![1  15 best player](https://user-images.githubusercontent.com/97677904/236262339-8e09fdfa-7340-40b2-8542-b0a959a338aa.jpg)
+
+The picture above depict the best 15 players in FIFA 21. Having L.Messi as the first and T. Courtois as the last 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CONCLUSION AND RECOMMENDATION
 
 I learnt some concept and procedure while cleaning the data. This really add to my data cleaning knowledge
