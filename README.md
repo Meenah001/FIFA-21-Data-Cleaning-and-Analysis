@@ -363,17 +363,29 @@ Below is the cleaned dataset on Microsoft Excel after all the cleaning and trans
 Some questions were been asked in order to derive a meaningful insight on the data. Some of these questions are;
 
 . Who are the top 15 players in FIFA 21?
+
 . Who are the top 5 goalkeepers?
-. Who ar the top 10 defenders?
+
+. Who are the top 10 defenders?
+
 . Who is the best central defensive midfielder?
+
 . Who is the overall best player?
+
 . Who are the top 2 strikers?
-. Who are the 10 most valueable players in FIFA 21? 
+
+. Who are the 10 most valueable players in FIFA 21?
+
 . What is the  most populated age group?
+
 . Who are the top 9 footballers with the highest wage?
-. Which is the most preferred foot by footballers? 
+
+. Which is the most preferred foot by footballers?
+
 . Top countries that has the highest number of footballer
+
 . Top 5 players with the longest contract duration
+
 . Top 10 players that has the most skill attributes
 
 ---
@@ -386,23 +398,75 @@ Analysis was carried out using pivot table, and also pivort chart for building d
 
 The picture above depict the best 15 players in FIFA 21. Having L.Messi as the first and T. Courtois as the last 
 
+---
 
+![2  5 goalkepr](https://user-images.githubusercontent.com/97677904/236264314-f07cedd6-8f59-42ae-ad52-395ae308081a.jpg)
 
+Using their goalkeeping attributes to analyse the best 5 goalkeepers, It's seen that M. Neuer is the best goalkeeper followed by M.tr Stegen, Alisson, J. Oblak and Ederson
 
+---
 
+![3  10 defender](https://user-images.githubusercontent.com/97677904/236265759-07bc7598-bee8-4f03-a7fb-db28eac45e9f.jpg)
 
+According to their defending attributes, the above names are the top 10 defenders
 
+---
 
+![4  players with highest wage](https://user-images.githubusercontent.com/97677904/236266779-1ce74c1b-3956-43ce-bc09-410c428753a0.jpg)
 
+The players that get the highest wage are shown above
 
+---
 
+![5  most valuable players](https://user-images.githubusercontent.com/97677904/236267364-5cdc98a9-84dd-48dd-a57b-215c96d56285.jpg)
 
+This shows the 10 most valuable players and it was determined by their market value
 
+---
 
+![6  2 strikers](https://user-images.githubusercontent.com/97677904/236267795-8f894fc2-1e1d-4e8e-9fbc-9a6c6f37fe4b.jpg)
 
+The top 2 strikers are Christiano Ronaldo and Lionel Messi as seen in the above image. This was achieved using their shooting ability
 
+---
 
+![7  country with most players](https://user-images.githubusercontent.com/97677904/236268400-7d863d3e-68fd-45a7-8ca1-f1eb89ab5494.jpg)
 
+The highest number of players originated from England (1705 players) follow by Germany (1195 players), Spain with (1065 players) then France (1003 players), also Argentina (943 players) and Brazil (887) 
+
+---
+
+![8  contract](https://user-images.githubusercontent.com/97677904/236270294-2f3807f3-eccc-4f2e-ba37-0507488e921d.jpg)
+
+H.Sogahata has the longest contract duration (23 years), I.Khune (21 years), I.Akinfeev (20 years), M.Bloomfield and D.Lewington have the same years of contract duration (19 years)
+
+---
+
+![9  skill](https://user-images.githubusercontent.com/97677904/236271997-6d01fd86-c291-479f-a954-c65fcf98135c.jpg)
+
+The above image shows the top players in respect to their skill attributes
+
+---
+
+![14  best  cntra](https://user-images.githubusercontent.com/97677904/236274855-8b6ee54f-39f6-4e04-9c29-7d61459d84f3.jpg)
+![10  best central](https://user-images.githubusercontent.com/97677904/236274939-a08eba6d-302e-40ae-99c5-694263542291.jpg)
+
+After thorough analysis, it's concluded that V.van Dijk is the best central defensive midfielder
+
+---
+
+![15  overall](https://user-images.githubusercontent.com/97677904/236276279-748752e1-6914-4a92-9251-c0f6938595b9.jpg)
+![11  overall player](https://user-images.githubusercontent.com/97677904/236276320-2d353c1c-304d-426b-9e48-53fbc1ceb380.jpg)
+
+Using the best overall rating the player has achieved in their career helped in determining the overall best player which is Lionel.Messi
+
+---
+
+# ANALYSIS REPORT
+
+![FIFA 21 DASHBOARD 1](https://user-images.githubusercontent.com/97677904/236279093-ca92fa3d-b235-447b-bb87-572fa29633d7.png)
+
+---
 
 CONCLUSION AND RECOMMENDATION
 
