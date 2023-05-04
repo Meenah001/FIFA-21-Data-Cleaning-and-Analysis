@@ -1,6 +1,6 @@
 # FIFA-21-Data-Cleaning-and-Analysis
 
-The project is all about data cleaning, which is the crucial step in analysis.
+The project is all about cleaning and analysing the datasst to get some meaningful insight from it.
 
 ![Screenshot 2023-05-01 142703](https://user-images.githubusercontent.com/97677904/235506580-a987b861-9c8f-4ce4-b80c-025e80d1fa6a.jpg)
 
@@ -479,6 +479,9 @@ Here is the link to the cleaned data:
 https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicrosoft_com/Edr-bY8edgJPlUBL4nsa0P0BlIC2OsFGHcZZDrfiM-N_VQ?rtime=XhyWyW9K20g
 
 
+Link to the dashboard
+
+https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicrosoft_com/EX3Qb7N_NUVDkpRDt67kU1IBcymDPRxiqmFUHvvJUj5l4w?e=qdcfuH
 
 
 
