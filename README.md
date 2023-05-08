@@ -464,7 +464,8 @@ Using the best overall rating the player has achieved in their career helped in 
 
 # ANALYSIS REPORT
 
-![FIFA 21 DASHBOARD 1](https://user-images.githubusercontent.com/97677904/236279093-ca92fa3d-b235-447b-bb87-572fa29633d7.png)
+![Corrected FIFA 21 Dashboard](https://user-images.githubusercontent.com/97677904/236842483-4d9434d7-8016-4c3f-9df7-9628efcff05b.png)
+
 
 ---
 
@@ -481,7 +482,7 @@ https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicroso
 
 Link to the dashboard
 
-https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicrosoft_com/EX3Qb7N_NUVDkpRDt67kU1IBe-lDO2GUSvukMCkaCTshuw?e=zJJ2TQ
+https://meenah001-my.sharepoint.com/:x:/g/personal/meenah001_meenah001_onmicrosoft_com/EdaOCbtAV3NPrzhcqJvg4LABQgBtA1G7n_5JzDgtFvqr6w?e=Ap8FJs
 
 
 
